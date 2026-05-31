@@ -21,3 +21,27 @@ int fact(int num)
     }
     return (factorial); 
 }
+
+
+// second approach
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    int result = 1;
+    printf("Enter the number for which u want to find factorial : ");
+    scanf("%d", &num);
+    
+    for(int i = 1; i<=num; i++)
+    {
+            result = result * i;
+  
+    }
+     
+        printf("The value of factorial of %d is given by: %d", num,result);
+    return 0;
+    
+    
+}
