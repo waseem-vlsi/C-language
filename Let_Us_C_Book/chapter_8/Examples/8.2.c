@@ -46,3 +46,19 @@ float func_pow(float a,float b)
     y = pow(a,b);
     return y;
 }
+
+
+// another method
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b, result;
+    printf("Enter the numbers for which u want to find powers: ");
+    scanf("%d %d", &a, &b);
+    result = pow(a,b);
+    printf("the value of result i.e., %d ^ %d is given by : %d", a,b,result);
+    return 0;
+}
