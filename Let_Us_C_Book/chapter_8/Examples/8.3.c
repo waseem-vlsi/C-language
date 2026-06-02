@@ -1,36 +1,28 @@
 #include <stdio.h>
-
-int romanize(int y, int k, const char *sym);
-
+int roman_func(int , int , int );
 int main()
 {
     int year;
-    printf("Enter a year: ");
+    printf("Enter the year for which u want to find roman numbers: ");
     scanf("%d", &year);
-
-    year = romanize(year, 1000, "M");
-    year = romanize(year, 900,  "CM");
-    year = romanize(year, 500,  "D");
-    year = romanize(year, 400,  "CD");
-    year = romanize(year, 100,  "C");
-    year = romanize(year, 90,   "XC");
-    year = romanize(year, 50,   "L");
-    year = romanize(year, 40,   "XL");
-    year = romanize(year, 10,   "X");
-    year = romanize(year, 9,    "IX");
-    year = romanize(year, 5,    "V");
-    year = romanize(year, 4,    "IV");
-    year = romanize(year, 1,    "I");
-
+   year =  roman_func(year,1000,'m');
+   year =  roman_func(year,500,'d');
+    year = roman_func(year,100,'c');
+    year = roman_func(year,50,'I');
+    year = roman_func(year,10,'x');
+    year = roman_func(year,5,'v');
+    year = roman_func(year,1,'i');
     return 0;
+    
 }
 
-int romanize(int y, int k, const char *sym)
+int roman_func(int year, int eq_val, int roman_val)
 {
-    while (y >= k)
+    int i,j;
+        j = year / eq_val;
+    for(i = 1; i<=j;i++)
     {
-        printf("%s", sym);
-        y -= k;
+        printf("%c", roman_val);
     }
-    return y;
+    return (year % eq_val);
 }
