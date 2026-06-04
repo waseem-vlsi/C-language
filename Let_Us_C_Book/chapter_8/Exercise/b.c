@@ -24,3 +24,35 @@ int main()
 
     return 0;
 }
+
+
+// method 2
+
+#include <stdio.h>
+
+int prime_fact(int);
+
+int main()
+{
+    int num;
+    printf("Enter a number for which u need to find prime factors: ");
+    scanf("%d",&num);
+    prime_fact(num);
+    return 0;
+}
+
+
+int prime_fact(int num)
+{
+    for(int i = 2; i<=num; i++)
+    {
+       while(num %i == 0)
+       {
+           printf("%d\t", i);
+           num = num/i;
+       }
+      
+       
+    }
+    return 0;
+}
