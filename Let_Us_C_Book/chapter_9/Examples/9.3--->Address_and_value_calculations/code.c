@@ -18,3 +18,20 @@ int main()
     return 0;
     
 }
+
+
+// another method
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Enter the random number : ");
+    scanf("%0d", &num);
+    
+    printf("Value of random number which we entered above : %0d\n", num);
+    printf("address of entered random number : %0ud", &num);
+    
+    return 0;
+}
